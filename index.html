@@ -68,11 +68,39 @@
     async function sendMsg() {
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([
-          {
-            "type": "sticker",
-            "stickerId": 1,
-            "packageId": 1
+        {
+          "type": "bubble",
+          "direction": "ltr",
+          "header": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "Header",
+                "align": "center",
+                "contents": []
+              }
+            ]
+          },
+          "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "Click Me",
+                "align": "center",
+                "action": {
+                  "type": "uri",
+                  "label": "This is label",
+                  "uri": "https://liff.line.me/1656236254-w6xkRkYK"
+                },
+                "contents": []
+              }
+            ]
           }
+        }
         ])
         alert("Message sent")
       }
