@@ -69,24 +69,8 @@
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([
           {
-            "type": "bubble",
-            "direction": "ltr",
-            "header": {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "text",
-                  "text": "Header",
-                  "align": "center",
-                  "action": {
-                    "type": "uri",
-                    "uri": "https://liff.line.me/1656236254-w6xkRkYK"
-                  },
-                  "contents": []
-                }
-              ]
-            }
+            "type": "text",
+            "text": "This is to test\n\nhttps://liff.line.me/1656236254-w6xkRkYK"
           }
         ])
         alert("Message sent")
